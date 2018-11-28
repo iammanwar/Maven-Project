@@ -50,7 +50,7 @@ public class AccountServlet extends HttpServlet {
     public void init() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connect = DriverManager.getConnection("jdbc:mysql://testingDakMailService-app-mysql:3306/dakDataBase","dakadmin","7268");
+			connect = DriverManager.getConnection("jdbc:mysql://testingdak-jws-app-mysql:3306/dakDataBase","dakadmin","7268");
 		}catch (Exception e) {
 			e.toString();
 		}
