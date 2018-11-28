@@ -1,0 +1,70 @@
+<div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true"
+	style="display: none;">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div id="composeModalHeader" class="modal-header">
+				<button id="composeModalCloseButton" value="chk" type="button"
+					class="close" data-dismiss="modal" aria-hidden="true">
+					<i class="ion-close-round"></i>
+				</button>
+				<h4 class="modal-title">
+					<i class="ion-compose"></i> Compose
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form method="post" id="composeMailFrm">
+						<div class="form-group">
+							<input id="sendTo" type="email" name="sendTo" required
+								class="form-control" placeholder="To">
+						</div>
+						<!--<div class="form-group">
+	                       <div class="row">
+	                           <div class="col-md-6">
+	                               <input id="sendCC" type="email" class="form-control" placeholder="Cc">
+	                           </div>
+	                           <div class="col-md-6">
+	                               <input id="sendBCC" type="email" class="form-control" placeholder="Bcc">
+	                           </div>
+	                       </div>
+	                   </div>-->
+						<div class="form-group">
+							<input id="mailSubject" type="text" name="subject"
+								class="form-control" placeholder="Subject">
+						</div>
+						<div class="form-group">
+							<textarea class="summernote" name="mailContent"></textarea>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-xs-12">
+								<div class="p-20">
+									<div class="form-group clearfix">
+										<div class="col-sm-12 padding-left-0 padding-right-0">
+											<!--<input type="file" name="files[]" id="filer_input1"
+                                                   multiple="multiple">-->
+											<input type="file" name="files">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="modal-footer">
+						<button type="button"
+							class="btn btn-success waves-effect waves-light m-r-5"
+							data-dismiss="modal">
+							<i class="fa fa-trash-o"></i>
+						</button>
+						<button id="composeModalSendButton"
+							class="btn btn-info waves-effect waves-light" type="submit"
+							name="sentBtn" value="sent">
+							<span>Send</span> <i class="fa fa-send m-l-10"></i>
+						</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
