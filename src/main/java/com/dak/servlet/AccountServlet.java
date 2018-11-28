@@ -366,9 +366,10 @@ public class AccountServlet extends HttpServlet {
 	public boolean profileSetup(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		boolean status=false;
 		HttpSession userInfo = request.getSession(false);
+		int userID=Integer.parseInt(userInfo.getAttribute("userId").toString());
 		try {
 			pStatement=connect.prepareStatement("SELECT `profilePicture` FROM `tbluserdata` WHERE `id`=?");
-			pStatement.setInt(1, (int)userInfo.getAttribute("userId"));
+			pStatement.setInt(1, userID );
 			rSet=pStatement.executeQuery();
 			while(rSet.next()) {
 				if(rSet.getString(1)==null) {
