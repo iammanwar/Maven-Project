@@ -29,7 +29,7 @@ $(document).ready(function(){
 						displayCompose=true;
 					}
 				});
-				$("#singInButton").click(function(){
+				$("#singOutButton").click(function(){
 					$("#signOutForm").submit();
 				});
 				$("#profileButton").click(function(){

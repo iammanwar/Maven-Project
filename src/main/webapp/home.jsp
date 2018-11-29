@@ -72,7 +72,7 @@
 	System.out.println("___>"+userid);
 	try{
 		Class.forName("com.mysql.jdbc.Driver");
-		connect = DriverManager.getConnection("jdbc:mysql://localhost/malingsysytem","root","");
+		connect = DriverManager.getConnection("jdbc:mysql://testingdak-jws-app-mysql:3306/dakDataBase","dakadmin","7268");
 		//-------------------------------------------
 		pStatement = connect.prepareStatement("SELECT M.id,firstName,U.lastName,M.subject,M.content,M.isTrash,M.isSeen,M.haveAttachedFile,U.id FROM tbl_maildata M LEFT JOIN tbluserdata U ON M.sentBy=U.id WHERE sentTo=? AND isDraft=? AND trashBy!=? AND isTrash=? AND archiveBy!=? AND archiveByAll=?");
 		pStatement.setInt(1,userid);

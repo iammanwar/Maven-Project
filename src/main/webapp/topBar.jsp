@@ -78,7 +78,7 @@
 								</li>
 								<li><a id="profileButton" href="javascript:{}"><i
 										class="ti-user m-r-5"></i> Profile</a></li>
-								<li><a id="singInButton" href="javascript:{}"><i
+								<li><a id="singOutButton" href="javascript:{}"><i
 										class="ti-power-off m-r-5"></i> Sign out</a></li>
 							</ul></li>
 
