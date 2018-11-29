@@ -55,10 +55,10 @@ public class profileSetup extends HttpServlet {
 			pStatement.executeUpdate();
 			pStatement=connect.prepareStatement("UPDATE `tbluserdata` SET `profilePicture`=? WHERE `id`=?");
 			pStatement.setString(1, "A~"+avatar);
-			pStatement.setInt(2,(int) userInfo.getAttribute("userId"));
+			pStatement.setInt(2,Integer.parseInt(userInfo.getAttribute("userId").toString()));
 			pStatement.executeUpdate();
 			pStatement=connect.prepareStatement("SELECT `profilePicture` FROM `tbluserdata` WHERE `id`=?");
-			pStatement.setInt(1, (int) userInfo.getAttribute("userId"));
+			pStatement.setInt(1, Integer.parseInt(userInfo.getAttribute("userId").toString()));
 			rSet=pStatement.executeQuery();
 			while(rSet.next()) {
 				userInfo.setAttribute("userPP", rSet.getString(1));
